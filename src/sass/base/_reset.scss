@@ -1,0 +1,41 @@
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+// if you want to change font family in RTL
+[dir="rtl"] * {
+  font-family: $font-family-lexend;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: $font-family-lexend;
+  font-weight: normal;
+  line-height: 1.4rem;
+  padding: 2rem;
+  [dir="rtl"]* {
+    font-family: $font-family-lexend;
+  }
+  font-size: $base-font-size;
+}
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  & img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
